@@ -5376,7 +5376,8 @@ a.badge:focus, a.badge:hover {
 .container .jumbotron, .container-fluid .jumbotron {
     padding-right: 15px;
     padding-left: 15px;
-    border-radius: 6px
+    border-radius: 6px;
+    margin-top: 27px;
 }
 
 .jumbotron .container {

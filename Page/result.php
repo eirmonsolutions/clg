@@ -94,7 +94,7 @@ if ($roll != $correct_roll || $pass != $correct_pass) {
 
     <!-- ❌ WRONG ROLL/PASSWORD – SHOW MESSAGE -->
     <div class="msg-box" style="padding:20px;">
-        <h3 style="color:red; font-weight:bold;">Result not available !!</h3>
+        <h3 style="color:red; font-weight:bold;">Invalid Roll No. & Password !!</h3>
     </div>
 
     <div class="disclaimer" style="padding:20px; background:#f9f9f9;">
