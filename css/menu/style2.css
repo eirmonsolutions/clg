@@ -1,0 +1,547 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i);
+
+ 
+header.carousel {
+    margin-top: 85px
+}
+
+    header.carousel .carousel-inner, header.carousel .item, header.carousel .item.active {
+        height: 100%
+    }
+
+    header.carousel .fill {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover
+    }
+
+nav-s.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.1)
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: 0 !important;
+    border: none;
+    margin-left: 20px; 
+    font-size: 45px;
+    margin-top: 0
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0
+}
+
+#sidebar {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    min-height: 100%;
+    z-index: 99999;
+    background-image: url(@Url.Content("_/index.html")template/image/universityback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    transition: all .3s;
+    overflow-y: auto !important;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+}
+
+.top-strip {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 10px 0
+}
+
+#sidebar.active {
+    right: 0
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    font-size: 16px;
+    font-weight: lighter
+}
+
+    #dismiss:hover {
+        background: #e8e8e8;
+        color: #333
+    }
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    z-index: 998;
+    display: none
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: rgba(0,0,0,.7);
+    display: none;
+}
+
+#sidebar ul.components {
+    padding: 20px 0
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px
+}
+
+#sidebar ul li a {
+    padding: 10px 11px;
+    font-size: 14px !important;
+    font-size: 1.1em;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2b2b2b
+}
+
+    #sidebar ul li a:focus, #sidebar ul li a:hover {
+        color: #fff;
+        background: #e9780e;
+        text-decoration: none
+    }
+
+#sidebar a[aria-expanded=true], #sidebar ul li.active > a {
+    color: #fff;
+    background: #4e87a0
+}
+
+.social-icons {
+    margin: 0 auto !important;
+    padding: 0
+}
+
+    .social-icons li {
+        list-style: none;
+        display: inline-block !important
+    }
+
+        .social-icons li a {
+            text-align: center;
+            
+            border-radius: 50% !important;
+            color: #fff;
+            padding: 5px 10px !important;
+            border-bottom: none !important;
+            margin-right: 5px
+        }
+
+            .social-icons li a:hover {
+                background: #4e87a0 !important;
+                color: #fff
+            }
+
+#sidebar ul li a[data-toggle=collapse] {
+    position: relative
+}
+
+#sidebar a[aria-expanded=true]::before, #sidebar ul li a[aria-expanded=false]::before {
+    content: '\f107';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: FontAwesome;
+    font-size: .6em
+}
+
+#sidebar ul li a[aria-expanded=true]::before {
+    content: '\f106'
+}
+
+#sidebar ul ul a {
+    font-size: .9em !important;
+    padding-left: 30px;
+    background: #181818
+}
+
+ul.CTAs {
+    padding: 20px
+}
+
+    ul.CTAs a {
+        text-align: center;
+        font-size: .9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px
+    }
+
+a.download {
+    background: #fff;
+    color: #7386d5
+}
+
+a.article, a.article:hover {
+    background: #d8342e !important;
+    color: #fff !important
+}
+
+.nav-custom {
+    background: 0 0;
+    min-height: 75px;
+    background: #fff;
+    border-color: transparent;
+    padding: 0
+}
+
+    .nav-custom .navbar-nav .nav-link {
+        color: #333;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 31px 14px;
+        font-size: 16px
+    }
+
+    .nav-custom .navbar-nav > li > a:hover {
+        color: #4e87a0
+    }
+
+    .nav-custom .navbar-nav > .open > a, .nav-custom .navbar-nav > .open > a:focus, .nav-custom .navbar-nav > .open > a:hover {
+        color: #4e87a0;
+        background-color: #fff
+    }
+
+    .nav-custom .navbar-nav > .active > a, .nav-custom .navbar-nav > .active > a:focus, .nav-custom .navbar-nav > .active > a:hover {
+        color: #4e87a0;
+        background-color: #fff
+    }
+
+    .nav-custom .navbar-brand > img {
+        width: 95%
+    }
+
+    .nav-custom .navbar-brand {
+        padding: 5px 7px;
+        margin-right: .5em
+    }
+
+    .nav-custom .navbar-header {
+        float: right
+    }
+
+    .nav-custom .dropdown-toggle::after {
+        display: none
+    }
+
+    .nav-custom .btn-red {
+        background: #da3233;
+        color: #fff !important;
+        padding: 5px 15px !important;
+        margin-top: 23px;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+
+    .nav-custom .dropdown:hover > .dropdown-menu {
+        display: block
+    }
+
+    .nav-custom .dropdown > .dropdown-toggle:active {
+        pointer-events: none
+    }
+
+.yamm .collapse, .yamm .dropdown, .yamm .dropup, .yamm .nav {
+    position: static
+}
+
+.yamm .container {
+    position: relative
+}
+
+.yamm .dropdown-menu {
+    left: auto;
+    margin-top: 0;
+    border-right: 3px solid #717171;
+    border-left: 3px solid #717171;
+    border-bottom: 10px solid #4e87a0;
+    box-shadow: 0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22)
+}
+
+.yamm .yamm-content {
+    padding: 20px 30px
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu {
+    left: 20%;
+    right: 10%;
+    background: #231f20;
+    border-radius: 0;
+    padding: 0;
+    font-size: 15px
+}
+
+    .yamm .dropdown.yamm-fw .dropdown-menu::before {
+        content: '';
+        position: absolute;
+        left: 58%;
+        top: -20px;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 19px solid #231f20;
+        clear: both;
+        z-index: 9999;
+        display: block;
+        border-top: 0
+    }
+
+.yamm .dropdown.yamm-fw .dropdown-menu3::before {
+    content: '';
+    position: absolute;
+    left: 48%;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 19px solid #231f20;
+    clear: both;
+    z-index: 9999;
+    display: block;
+    border-top: 0
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu1::before {
+    content: '';
+    position: absolute;
+    left: 7%;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 19px solid #231f20;
+    clear: both;
+    z-index: 9999;
+    display: block;
+    border-top: 0
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu1 {
+    left: auto !important;
+    right: auto !important;
+    background: #231f20;
+    min-width: 18%
+}
+
+    .yamm .dropdown.yamm-fw .dropdown-menu1 li a {
+        color: #fff;
+        padding: 10px 20px;
+        display: block
+    }
+
+        .yamm .dropdown.yamm-fw .dropdown-menu1 li a:hover {
+            color: #fff;
+            background: #4e87a0;
+            border-radius: 0
+        }
+
+.yamm .dropdown.yamm-fw .dropdown-menu2 {
+    left: 10% !important;
+    right: 10% !important;
+    background: #231f20
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu3 {
+    left: 25% !important;
+    right: 15% !important;
+    background: #231f20
+}
+
+.yamm .yamm-content img {
+    width: 100%
+}
+
+.yamm .yamm-content a {
+    color: #fff;
+    text-transform: uppercase
+}
+
+.yamm .yamm-content h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 0
+}
+
+.yamm .yamm-content a:hover h4 {
+    background: #fff;
+    color: #333
+}
+
+.yamm .yamm-content a h2 span {
+    font-weight: 1000
+}
+
+.yamm .yamm-content a h2 {
+    margin-top: 0;
+    padding: 15px 20px
+}
+
+.yamm .yamm-content a:hover h2 {
+    color: #d3232a
+}
+
+.yamm .yamm-content a:hover {
+    text-decoration: none
+}
+
+.yamm .yamm-content2 {
+    padding: 20px 30px
+}
+
+    .yamm .yamm-content2 a {
+        color: #fff;
+        font-size: 16px
+    }
+
+        .yamm .yamm-content2 a h2 span {
+            font-weight: 1000
+        }
+
+        .yamm .yamm-content2 a h2 {
+            background: #d3232a;
+            margin-top: 0;
+            padding: 15px 20px
+        }
+
+        .yamm .yamm-content2 a:hover h2 {
+            background: #fff;
+            color: #333
+        }
+
+        .yamm .yamm-content2 a:hover {
+            color: #dd2837;
+            text-decoration: none
+        }
+
+    .yamm .yamm-content2 h4 {
+        font-size: 14px;
+        margin-bottom: 20px
+    }
+
+    .yamm .yamm-content2 li {
+        text-transform: uppercase;
+        line-height: 30px;
+        font-weight: 700
+    }
+
+        .yamm .yamm-content2 li p {
+            text-transform: uppercase;
+            border-bottom: 1px solid #aaa;
+            padding-bottom: 5px;
+            color: #fff;
+            font-size: 16px
+        }
+
+        .yamm .yamm-content2 li ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none
+        }
+
+            .yamm .yamm-content2 li ul li {
+                line-height: 30px;
+                text-transform: none;
+                font-weight: lighter
+            }
+
+.yamm .yamm-content3 {
+    padding: 20px 30px
+}
+
+    .yamm .yamm-content3 a {
+        color: #fff;
+        font-size: 16px
+    }
+
+    .yamm .yamm-content3 img {
+        margin-right: 10px
+    }
+
+    .yamm .yamm-content3 a h2 span {
+        font-weight: 1000
+    }
+
+    .yamm .yamm-content3 a h2 {
+        background: #d3232a;
+        margin-top: 0;
+        padding: 15px 20px
+    }
+
+    .yamm .yamm-content3 a:hover h2 {
+        background: #fff;
+        color: #333
+    }
+
+    .yamm .yamm-content3 a:hover {
+        color: #dd2837;
+        text-decoration: none
+    }
+
+    .yamm .yamm-content3 h4 {
+        font-size: 14px;
+        margin-bottom: 20px
+    }
+
+    .yamm .yamm-content3 li {
+        text-transform: uppercase;
+        line-height: 44px;
+        font-weight: 700
+    }
+
+        .yamm .yamm-content3 li p {
+            text-transform: uppercase;
+            border-bottom: 1px solid #aaa;
+            padding-bottom: 5px;
+            color: #fff;
+            font-size: 16px
+        }
+
+        .yamm .yamm-content3 li ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none
+        }
+
+            .yamm .yamm-content3 li ul li {
+                line-height: 30px;
+                text-transform: none;
+                font-weight: lighter
+            }
+
+ 
