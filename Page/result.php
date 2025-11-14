@@ -1,5 +1,6 @@
 <?php
-if(empty($_POST['rollno']) || empty($_POST['enrollno'])) {
+// ---- STEP 1: Empty fields (only JS alert allowed) ----
+if (empty($_POST['rollno']) || empty($_POST['enrollno'])) {
     echo "<script>alert('Roll No & Password required!'); window.history.back();</script>";
     exit;
 }
@@ -7,15 +8,18 @@ if(empty($_POST['rollno']) || empty($_POST['enrollno'])) {
 $roll = $_POST['rollno'];
 $pass = $_POST['enrollno'];
 
-// Example correct login
-if($roll == "215094376450" && $pass == "Jass@123") {
-    // success
-} else {
-    echo "<script>alert('Invalid Roll No or Password'); window.history.back();</script>";
-    exit;
-}
+// ---- Correct credentials ----
+$correct_roll = "215094376450";
+$correct_pass = "Jass@123";
 
+// ---- Check login ----
+$login_failed = false;
+
+if ($roll != $correct_roll || $pass != $correct_pass) {
+    $login_failed = true;
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,6 +64,7 @@ if($roll == "215094376450" && $pass == "Jass@123") {
 
 <body>
 
+
     <div class="container-fluid" id="">
         <div class="row" style="display:flex;">
             <div class="col-md-12"><a href="#"> <img src="../images/university-logo.png" alt="GJUST"
@@ -83,6 +88,26 @@ if($roll == "215094376450" && $pass == "Jass@123") {
             </div>
         </div>
     </nav>
+
+
+    <?php if ($login_failed): ?>
+
+    <!-- ❌ WRONG ROLL/PASSWORD – SHOW MESSAGE -->
+    <div class="msg-box" style="padding:20px;">
+        <h3 style="color:red; font-weight:bold;">Result not available !!</h3>
+    </div>
+
+    <div class="disclaimer" style="padding:20px; background:#f9f9f9;">
+        <b>Disclaimer:</b> Guru Jambheshwar University of Science and Technology is not
+        responsible for any inadvertent error that may have crept in the results being
+        published on NET. The results published on net are for immediate information 
+        to the examinees. These cannot be treated as original mark sheets. Original 
+        mark sheets have been issued by the University separately.
+    </div>
+
+<?php else: ?>
+
+
 
     <div class="container minht "
         style="background-image: url(
@@ -269,6 +294,9 @@ https://results.gurujambheshwaruniversity.info/gjubg.png); background-repeat: no
         </div>
 
     </div>
+
+    <?php endif; ?>
+
 
 </body>
 
