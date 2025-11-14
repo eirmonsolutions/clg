@@ -51,14 +51,14 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script>
-        function validateForm() {
-            let x = document.forms["myForm"]["rollno"].value;
-            let y = document.forms["myForm"]["enrollno"].value;
-            if (x == "" && y == "") {
-                alert("Enter Roll No. ");
-                return false;
-            }
-        }
+       function validateForm() {
+    let x = document.forms["myForm"]["rollno"].value;
+    let y = document.forms["myForm"]["enrollno"].value;
+    if (x == "" && y == "") {
+        alert("Enter Roll No. ");
+        return false;
+    }
+}
     </script>
 </head>
 
@@ -87,8 +87,7 @@
         </div>
     </nav>
     <div class="container minht">
-        <form role="form" id="form1" method="post" name="myForm" action="result.html" onsubmit="return validateForm()">
-
+        <form method="post" action="result.php">
             <div class="jumbotron">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">

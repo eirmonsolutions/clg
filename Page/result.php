@@ -1,3 +1,22 @@
+<?php
+if(empty($_POST['rollno']) || empty($_POST['enrollno'])) {
+    echo "<script>alert('Roll No & Password required!'); window.history.back();</script>";
+    exit;
+}
+
+$roll = $_POST['rollno'];
+$pass = $_POST['enrollno'];
+
+// Example correct login
+if($roll == "215094376450" && $pass == "Jass@123") {
+    // success
+} else {
+    echo "<script>alert('Invalid Roll No or Password'); window.history.back();</script>";
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
